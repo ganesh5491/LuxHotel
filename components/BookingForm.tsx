@@ -515,9 +515,14 @@ export function BookingForm({ onClose, isModal = false }: BookingFormProps) {
           aria-describedby={errors.agreeToTerms ? 'agreeToTerms-error' : undefined}
         />
         <div>
-          <Label htmlFor="agreeToTerms" className="text-sm text-gray-700 cursor-pointer">
-            I agree to the <a href="/terms" className="text-yellow-600 hover:text-yellow-700 underline">Terms and Conditions</a> and <a href="/privacy" className=\"text-yellow-600 hover:text-yellow-700 underline">Privacy Policy</a> <span className=\"text-red-500" aria-label=\"required">*</span>
-          </Label>
+        <Label htmlFor="agreeToTerms" className="text-sm text-gray-700 cursor-pointer">
+  I agree to the 
+  <a href="/terms" className="text-yellow-600 hover:text-yellow-700 underline">Terms and Conditions</a> 
+  and 
+  <a href="/privacy" className="text-yellow-600 hover:text-yellow-700 underline">Privacy Policy</a> 
+  <span className="text-red-500" aria-label="required">*</span>
+</Label>
+
           {errors.agreeToTerms && (
             <p id="agreeToTerms-error" className="mt-1 text-sm text-red-600" role="alert">
               {errors.agreeToTerms}
